@@ -1,3 +1,7 @@
+# Note
+
+This is a fork I made adding a get-only case path subscript. The maintainers [decided not to include it, at least for the time being](https://github.com/pointfreeco/swift-case-paths/pull/1) but I still like it and find it to make this much easier to use, so I'm keeping it around for the time being. (See below for added documentation on changes.)
+
 # 🧰 CasePaths
 
 [![Swift 5.1](https://img.shields.io/badge/swift-5.1-ED523F.svg?style=flat)](https://swift.org/download/)
@@ -5,10 +9,6 @@
 [![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
 
 Case paths bring the power and ergonomics of key paths to enums!
-
-### Note
-
-This is a fork I made adding a get-only case path subscript. The maintainers [decided not to include it, at least for the time being](https://github.com/pointfreeco/swift-case-paths/pull/1) but I still like it and find it to make this much easier to use, so I'm keeping it around for the time being.
 
 ## Motivation
 
