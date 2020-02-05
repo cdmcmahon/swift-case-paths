@@ -6,6 +6,10 @@
 
 Case paths bring the power and ergonomics of key paths to enums!
 
+### Note
+
+This is a fork I made adding a get-only case path subscript. The maintainers [decided not to include it, at least for the time being](https://github.com/pointfreeco/swift-case-paths/pull/1) but I still like it and find it to make this much easier to use, so I'm keeping it around for the time being.
+
 ## Motivation
 
 Swift endows every struct and class property with a [key path](https://developer.apple.com/documentation/swift/swift_standard_library/key-path_expressions).
@@ -111,6 +115,16 @@ CasePaths uses Swift reflection to automatically and extract associated values f
 ``` swift
 extract(case: Authentication.authenticated, from: .authenticated("cafebeef"))
 // Optional("cafebeef")
+```
+
+Additionally, if you opt in by adding a conformance on your enum to the  `CasePathSubscriptable` protocol, you can extract associated values from an enum in a way that is familiar to any user of key paths.
+
+```swift
+let loggedIn: Authentication = .authenticated("cafebeef")
+let notLoggedIn: Authentication = .unauthenticated
+
+loggedIn[casePath: /Authentication.authenticated] // Optional("cafebeef")
+notLoggedIn[casePath: /Authentication.authenticated] // nil
 ```
 
 ## Case paths without operators

@@ -1,3 +1,4 @@
+import Foundation
 public protocol CasePathSubscriptable {}
 
 /// Opt in protocol to allow subscripting of case paths in a similar way to key paths on structs
